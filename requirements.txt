@@ -1,4 +1,8 @@
 sanic==22.6.2
-diffusers==0.2.3
+diffusers
 transformers
 scipy
+opencv-contrib-python
+controlnet_aux
+xformers
+git+https://github.com/huggingface/accelerate.git

@@ -1,5 +1,5 @@
 # Must use a Cuda version 11+
-FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
+FROM pytorch/pytorch:1.13.1-cuda11.6-cudnn8-runtime
 
 WORKDIR /
 
@@ -15,10 +15,13 @@ RUN pip3 install -r requirements.txt
 ADD server.py .
 EXPOSE 8000
 
-# Add your huggingface auth key here
-ENV HF_AUTH_TOKEN=your_token
+ENV CNET_MODEL="lllyasviel/sd-controlnet-seg"
+ENV SD_MODEL="SG161222/Realistic_Vision_V1.4_Fantasy.ai"
 
-# Add your model weight files 
+ADD utils.py .
+ADD controlnet_utils.py .
+
+# Add your model weight files
 # (in this case we have a python script)
 ADD download.py .
 RUN python3 download.py
