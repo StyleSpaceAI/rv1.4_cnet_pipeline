@@ -29,8 +29,8 @@ def init():
         SD_MODEL, controlnet=controlnet, torch_dtype=torch.float16, use_auth_token=HF_AUTH_TOKEN)
     model.scheduler = UniPCMultistepScheduler.from_config(model.scheduler.config)
 
-    model.enable_model_cpu_offload()
-    model.enable_xformers_memory_efficient_attention()
+    # model.enable_model_cpu_offload()
+    # model.enable_xformers_memory_efficient_attention()
 
     image_processor = AutoImageProcessor.from_pretrained("openmmlab/upernet-convnext-small")
     image_segmentor = UperNetForSemanticSegmentation.from_pretrained("openmmlab/upernet-convnext-small")
