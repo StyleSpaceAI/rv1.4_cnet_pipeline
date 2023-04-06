@@ -1,8 +1,9 @@
-sanic==22.6.2
-diffusers
-transformers
-scipy
-opencv-contrib-python
-controlnet_aux
-xformers
 git+https://github.com/huggingface/accelerate.git
+controlnet_aux
+diffusers==0.14.0
+opencv-contrib-python
+sanic==22.6.2
+scipy
+transformers==4.27.1
+triton==2.0.0.post1
+xformers==0.0.16

@@ -16,7 +16,7 @@ ADD server.py .
 EXPOSE 8000
 
 ENV CNET_MODEL="lllyasviel/sd-controlnet-seg"
-ENV SD_MODEL="SG161222/Realistic_Vision_V1.4_Fantasy.ai"
+ENV SD_MODEL="SG161222/Realistic_Vision_V1.4"
 
 ADD utils.py .
 ADD controlnet_utils.py .
